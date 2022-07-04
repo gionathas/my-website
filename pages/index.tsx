@@ -1,7 +1,16 @@
+import LatestProjectsSection from 'components/sections/LatestProjectsSection'
+import OverviewSection from 'components/sections/OverviewSection'
+import TechStackSection from 'components/sections/TechStackSection'
 import type { NextPage } from 'next'
 
-const Home: NextPage = () => {
-  return <div className="text-3xl font-bold underline">It works</div>
+const HomePage: NextPage = () => {
+  return (
+    <>
+      <OverviewSection />
+      <LatestProjectsSection className="mt-16" />
+      <TechStackSection className="my-14" />
+    </>
+  )
 }
 
-export default Home
+export default HomePage

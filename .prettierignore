@@ -3,4 +3,4 @@ node_modules
 **/_next/**
 .swc
 next-env.d.ts
-public
+public/images
