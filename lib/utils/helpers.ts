@@ -11,5 +11,9 @@ export const isProduction = () => {
 }
 
 export const isAnalyticsEnabled = () => {
-  return isProduction() && process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true'
+  return (
+    isProduction() &&
+    isBrowser() &&
+    process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true'
+  )
 }
