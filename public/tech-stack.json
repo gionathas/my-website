@@ -1,0 +1,20 @@
+[
+  {
+    "name": "NextJS",
+    "desc": "(React based framework)"
+  },
+  {
+    "name": "TailwindCSS",
+    "desc": "(CSS utility framework)"
+  },
+  {
+    "name": "NodeJS"
+  },
+  {
+    "name": "Typescript"
+  },
+  {
+    "name": "Firebase",
+    "desc": "(if i need a backend platform)"
+  }
+]
