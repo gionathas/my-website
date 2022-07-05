@@ -6,7 +6,7 @@ import 'styles/globals.css'
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
-      <SEOMetaTags />
+      <MetaTags />
       <Layout>
         <Component {...pageProps} />
       </Layout>
@@ -14,9 +14,14 @@ const App = ({ Component, pageProps }: AppProps) => {
   )
 }
 
-const SEOMetaTags = () => {
+const MetaTags = () => {
   return (
     <Head>
+      <link
+        rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨🏻‍💻</text></svg>"
+      />
+
       <title>Gionatha Sturba</title>
       <meta name="description" content="Gionatha Sturba Homepage" />
       <meta name="author" content="Gionatha Sturba" />
