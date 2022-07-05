@@ -1,5 +1,6 @@
 import { redirectTo } from 'lib/utils/helpers'
 import Image from 'next/image'
+import { useState } from 'react'
 
 export type ProjectCardProps = {
   project: {
@@ -44,6 +45,8 @@ const ProjectThumbnail = ({
   onClick,
   className = '',
 }: ProjectThumbnailProps) => {
+  const [isLoading, setIsLoading] = useState(true)
+
   return (
     <div
       onClick={onClick}
@@ -51,9 +54,13 @@ const ProjectThumbnail = ({
     >
       <Image
         src={thumbnailSrc}
+        className={`duration-200 ease-in-out ${
+          isLoading ? 'grayscale blur-md' : 'grayscale-0 blur-0'
+        }`}
         layout="fill"
         objectFit="cover"
         alt="Project Thumbnail"
+        onLoadingComplete={() => setIsLoading(false)}
       />
     </div>
   )

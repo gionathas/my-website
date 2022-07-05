@@ -6,11 +6,11 @@ import {
   AiOutlineInstagram,
 } from 'react-icons/ai'
 import { BsDiscord } from 'react-icons/bs'
-import SocialLink from './SocialLink'
+import SocialLink from '../SocialLink'
 
 const Footer = () => {
   return (
-    <footer className="w-full">
+    <footer className="w-full mt-20">
       <h4 className="text-center font-light text-sm text-neutral-500">
         © 2022 Gionatha Sturba. All Rights Reserved.
       </h4>

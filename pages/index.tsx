@@ -8,7 +8,7 @@ const HomePage: NextPage = () => {
     <>
       <OverviewSection />
       <LatestProjectsSection className="mt-16" />
-      <TechStackSection className="my-14" />
+      <TechStackSection className="mt-14" />
     </>
   )
 }

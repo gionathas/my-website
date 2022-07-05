@@ -1,6 +1,7 @@
 import routes from 'config/routes'
 import useWindowScroll from 'lib/hooks/useWindowScroll'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const navigationItems: { title: string; href: string }[] = [
   {
@@ -20,6 +21,7 @@ const BACKDROP_BLUR_THRESHOLD_VALUE = 20
 
 const Header = () => {
   const pageYScrollOffset = useWindowScroll()
+  const router = useRouter()
 
   return (
     <header
@@ -35,7 +37,11 @@ const Header = () => {
         <div className="flex items-center gap-x-4">
           {navigationItems.map(({ title, href }) => (
             <Link key={title} href={href}>
-              <span className="hover:scale-105 cursor-pointer hover:underline underline-offset-4 transition-transform duration-100">
+              <span
+                className={`text-sm md:text-base hover:scale-105 cursor-pointer hover:underline underline-offset-4 transition-transform duration-100 ${
+                  router.pathname === href ? 'font-semibold' : 'font-normal'
+                }`}
+              >
                 {title}
               </span>
             </Link>
