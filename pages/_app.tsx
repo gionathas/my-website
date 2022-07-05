@@ -1,12 +1,16 @@
 import Layout from 'components/layout/Layout'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import { GoogleAnalytics, usePageViews } from 'nextjs-google-analytics'
 import 'styles/globals.css'
 
 const App = ({ Component, pageProps }: AppProps) => {
+  usePageViews()
+
   return (
     <>
       <MetaTags />
+      <GoogleAnalytics />
       <Layout>
         <Component {...pageProps} />
       </Layout>

@@ -9,11 +9,3 @@ export const redirectTo = (href: string) => {
 export const isProduction = () => {
   return process.env.NODE_ENV === 'production'
 }
-
-export const isAnalyticsEnabled = () => {
-  return (
-    isProduction() &&
-    isBrowser() &&
-    process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true'
-  )
-}
