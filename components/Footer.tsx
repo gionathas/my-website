@@ -6,6 +6,7 @@ import {
   AiOutlineInstagram,
 } from 'react-icons/ai'
 import { BsDiscord } from 'react-icons/bs'
+import SocialLink from './SocialLink'
 
 const Footer = () => {
   return (
@@ -13,23 +14,33 @@ const Footer = () => {
       <h4 className="text-center font-light text-sm text-neutral-500">
         © 2022 Gionatha Sturba. All Rights Reserved.
       </h4>
-      <div className="flex justify-center items-center gap-x-2 my-2">
-        <a className="text-black" href={social.linkedin}>
-          <AiFillLinkedin className="w-4 h-4" />
-        </a>
-        <a className="text-black" href={social.github}>
-          <AiFillGithub className="w-4 h-4" />
-        </a>
-        <a className="text-black" href={social.facebook}>
-          <AiFillFacebook className="w-4 h-4" />
-        </a>
-        <a className="text-black" href={social.instagram}>
-          <AiOutlineInstagram className="w-4 h-4" />
-        </a>
-        <a className="text-black" href={social.discord}>
-          <BsDiscord className="w-4 h-4" />
-        </a>
-      </div>
+      <ul className="flex justify-center items-center gap-x-2 my-2">
+        <SocialLink
+          className="text-black"
+          icon={AiFillLinkedin}
+          href={social.linkedin}
+        />
+        <SocialLink
+          className="text-black"
+          icon={AiFillGithub}
+          href={social.github}
+        />
+        <SocialLink
+          className="text-black"
+          icon={AiFillFacebook}
+          href={social.facebook}
+        />
+        <SocialLink
+          className="text-black"
+          icon={AiOutlineInstagram}
+          href={social.instagram}
+        />
+        <SocialLink
+          className="text-black"
+          icon={BsDiscord}
+          href={social.discord}
+        />
+      </ul>
     </footer>
   )
 }
