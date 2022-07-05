@@ -1,15 +1,22 @@
-[
-  {
+{
+  "qwestions": {
     "title": "Qwestions",
-    "description": "An Open platform to ask and answer questions",
+    "description": "An open platform to ask and answer questions",
     "thumbnailSrc": "/images/thumbnails/qwestions.png",
-    "demo": "https://qwestions.vercel.app/"
+    "demoHref": "https://qwestions.vercel.app/"
   },
-  {
+  "tmdb": {
     "title": "TMDB",
     "description": "Search and browse latest movies",
     "thumbnailSrc": "/images/thumbnails/tmdb.png",
-    "demo": "https://tmdb-nu.vercel.app/",
+    "demoHref": "https://tmdb-nu.vercel.app/",
     "github": "https://github.com/gionny96/tmdb"
+  },
+  "covid19Tracker": {
+    "title": "COVID-19 Tracker",
+    "description": "A livemap that tracks the evolution of COVID-19 around the world",
+    "thumbnailSrc": "/images/thumbnails/covid19Tracker.png",
+    "demoHref": "https://covid19-realtime-tracker.netlify.app/livemap",
+    "github": "https://github.com/gionny96/covid19-tracker"
   }
-]
+}

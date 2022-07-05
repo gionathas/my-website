@@ -5,6 +5,7 @@ import {
   AiFillLinkedin,
   AiOutlineInstagram,
 } from 'react-icons/ai'
+import { BsDiscord } from 'react-icons/bs'
 
 const Footer = () => {
   return (
@@ -24,6 +25,9 @@ const Footer = () => {
         </a>
         <a className="text-black" href={social.instagram}>
           <AiOutlineInstagram className="w-4 h-4" />
+        </a>
+        <a className="text-black" href={social.discord}>
+          <BsDiscord className="w-4 h-4" />
         </a>
       </div>
     </footer>
