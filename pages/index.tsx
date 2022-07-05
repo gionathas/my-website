@@ -1,3 +1,4 @@
+import GtagScript from 'components/GtagScript'
 import LatestProjectsSection from 'components/sections/LatestProjectsSection'
 import OverviewSection from 'components/sections/OverviewSection'
 import TechStackSection from 'components/sections/TechStackSection'
@@ -9,6 +10,7 @@ const HomePage: NextPage = () => {
       <OverviewSection />
       <LatestProjectsSection className="mt-16" />
       <TechStackSection className="mt-14" />
+      <GtagScript />
     </>
   )
 }

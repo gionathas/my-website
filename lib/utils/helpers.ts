@@ -5,3 +5,11 @@ export const redirectTo = (href: string) => {
     window.location.href = href
   }
 }
+
+export const isProduction = () => {
+  return process.env.NODE_ENV === 'production'
+}
+
+export const isAnalyticsEnabled = () => {
+  return isProduction() && process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true'
+}
