@@ -26,11 +26,10 @@ const MetaTags = () => {
       <meta name="description" content="Gionatha Sturba Homepage" />
       <meta name="author" content="Gionatha Sturba" />
 
-      <meta property="og:url" content="https://www.gionathas.dev/" />
+      <meta property="og:url" content="https://gionathas.dev/" />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="Gionatha Sturba" />
+      <meta property="og:title" content="Gionatha Sturba | Homepage" />
       <meta property="og:description" content="Gionatha Sturba Homepage" />
-      <meta property="og:image" content="https://www.craftz.dog/card.png" />
     </Head>
   )
 }
