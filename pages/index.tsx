@@ -7,8 +7,8 @@ const HomePage: NextPage = () => {
   return (
     <>
       <OverviewSection />
-      <LatestWorksSection className="mt-16" />
-      <PopularPostsSection className="mt-24" />
+      <LatestWorksSection className="mt-32 xs:mt-16" />
+      <PopularPostsSection className="mt-32 xs:mt-24" />
     </>
   )
 }
