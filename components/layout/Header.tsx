@@ -3,14 +3,14 @@ import useWindowScroll from 'lib/hooks/useWindowScroll'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-const navigationItems: { title: string; href: string }[] = [
+const navigationLinks: { title: string; href: string }[] = [
   {
     title: 'Bio',
     href: routes.bio,
   },
   {
-    title: 'Projects',
-    href: routes.projects,
+    title: 'Works',
+    href: routes.works,
   },
   {
     title: 'Contacts',
@@ -30,20 +30,20 @@ const Header = () => {
         'backdrop-blur-md bg-white/30'
       }`}
     >
-      <div className="flex max-w-2xl mx-auto justify-between px-2 py-3">
+      <div className="flex justify-between max-w-2xl px-2 py-3 mx-auto">
         <Link href={routes.home}>
           <h2 className="font-semibold cursor-pointer">👨🏻‍💻 Gionatha Sturba</h2>
         </Link>
         <div className="flex items-center gap-x-4">
-          {navigationItems.map(({ title, href }) => (
+          {navigationLinks.map(({ title, href }) => (
             <Link key={title} href={href}>
-              <span
-                className={`text-sm md:text-base hover:scale-105 cursor-pointer hover:underline underline-offset-4 transition-transform duration-100 ${
+              <a
+                className={`text-sm text-black md:text-base hover:scale-105 transition-transform duration-100 ${
                   router.pathname === href ? 'font-semibold' : 'font-normal'
                 }`}
               >
                 {title}
-              </span>
+              </a>
             </Link>
           ))}
         </div>
