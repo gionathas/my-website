@@ -3,6 +3,7 @@ import {
   AiFillFacebook,
   AiFillGithub,
   AiFillLinkedin,
+  AiFillYoutube,
   AiOutlineInstagram,
 } from 'react-icons/ai'
 import { BsDiscord } from 'react-icons/bs'
@@ -11,10 +12,15 @@ import SocialLink from '../SocialLink'
 const Footer = () => {
   return (
     <footer className="w-full mt-20">
-      <h4 className="text-center font-light text-sm text-neutral-500">
+      <h4 className="text-sm font-light text-center text-neutral-500">
         © 2022 Gionatha Sturba. All Rights Reserved.
       </h4>
-      <ul className="flex justify-center items-center gap-x-2 my-2">
+      <ul className="flex items-center justify-center my-2 text-black gap-x-2">
+        <SocialLink
+          className="text-black"
+          icon={AiFillYoutube}
+          href={social.youtube}
+        />
         <SocialLink
           className="text-black"
           icon={AiFillLinkedin}

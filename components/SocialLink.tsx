@@ -12,10 +12,10 @@ export const SocialLink = ({
   className?: string
 }) => {
   return (
-    <a className={className} href={href}>
-      <Icon className="w-4 h-4 inline" />
+    <a className={className} target="_blank" rel="noreferrer" href={href}>
+      <Icon className="inline w-4 h-4" />
       {title && (
-        <span className="text-sm font-medium ml-1 hover:underline hover:underline-offset-4">
+        <span className="ml-1 text-sm font-medium hover:underline hover:underline-offset-4">
           {title}
         </span>
       )}

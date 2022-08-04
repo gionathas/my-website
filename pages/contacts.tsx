@@ -1,6 +1,6 @@
+import ResponsiveImage from 'components/ResponsiveImage'
 import SocialLink from 'components/SocialLink'
 import { NextPage } from 'next'
-import Image from 'next/image'
 import ProfileImage from 'public/images/profile/contacts_profile.png'
 import social from 'public/social.json'
 import {
@@ -14,16 +14,13 @@ import { MdEmail } from 'react-icons/md'
 
 const ContactsPage: NextPage = () => {
   return (
-    <div className="flex justify-center items-center gap-x-4">
-      <div className="relative w-40 h-40">
-        <Image
-          src={ProfileImage}
-          layout="fill"
-          objectFit="cover"
-          alt="contacts profile"
-          placeholder="blur"
-        />
-      </div>
+    <div className="flex items-center justify-center gap-x-4">
+      <ResponsiveImage
+        className="w-40 h-40"
+        src={ProfileImage}
+        alt="contacts profile"
+        placeholder="blur"
+      />
       <ul className="flex flex-col items-start gap-y-1">
         <SocialLink
           className="text-cyan-700"

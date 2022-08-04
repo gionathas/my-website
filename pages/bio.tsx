@@ -1,24 +1,21 @@
+import ResponsiveImage from 'components/ResponsiveImage'
 import { NextPage } from 'next'
-import Image from 'next/image'
 import BioImage from 'public/images/bio.jpeg'
 
 const BiographyPage: NextPage = () => {
   return (
-    <div>
-      <div className="relative w-full h-72  overflow-hidden rounded-md">
-        <Image
-          src={BioImage}
-          layout="fill"
-          objectFit="cover"
-          objectPosition="100% 70%"
-          alt="bio profile"
-          quality={100}
-          placeholder="blur"
-        />
-      </div>
+    <>
+      <ResponsiveImage
+        className="w-full rounded-md h-72"
+        src={BioImage}
+        objectPosition="100% 70%"
+        alt="bio profile"
+        quality={100}
+        placeholder="blur"
+      />
       <ShortBio className="mt-5" />
       <BioArticle className="mt-8" />
-    </div>
+    </>
   )
 }
 

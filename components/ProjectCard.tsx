@@ -1,68 +1,59 @@
-import { redirectTo } from 'lib/utils/helpers'
-import Image from 'next/image'
 import { useState } from 'react'
+import ResponsiveImage from './ResponsiveImage'
 
 export type ProjectCardProps = {
   project: {
     title: string
     description: string
-    demoHref: string
+    url: string
     thumbnailSrc: string
   }
   className?: string
 }
 
 const ProjectCard = ({ project, className = '' }: ProjectCardProps) => {
-  const handleClick = () => {
-    redirectTo(project.demoHref)
-  }
-
   return (
-    <div className={className}>
+    <a
+      href={project.url}
+      target="_blank"
+      className={`text-black hover:no-underline group ${className}`}
+      rel="noreferrer"
+    >
       <ProjectThumbnail
-        onClick={handleClick}
         thumbnailSrc={project.thumbnailSrc}
-        href={project.demoHref}
+        href={project.url}
         className="flex-1"
       />
       <div className="mt-2 text-center">
-        <h3 className="text-sm font-medium">{project.title}</h3>
-        <p className="text-xs">{project.description}</p>
+        <h3 className="text-base font-semibold">{project.title}</h3>
+        <p className="mt-1 text-xs">{project.description}</p>
       </div>
-    </div>
+    </a>
   )
 }
 
 type ProjectThumbnailProps = {
   thumbnailSrc: string
   href: string
-  onClick: () => void
   className?: string
 }
 
 const ProjectThumbnail = ({
   thumbnailSrc,
-  onClick,
   className = '',
 }: ProjectThumbnailProps) => {
   const [isLoading, setIsLoading] = useState(true)
 
   return (
-    <div
-      onClick={onClick}
-      className={`relative w-full h-36 rounded-lg overflow-hidden hover:blur-[1px] drop-shadow-lg cursor-pointer transition-transform duration-200 ${className}`}
-    >
-      <Image
-        src={thumbnailSrc}
-        className={`duration-200 ease-in-out ${
-          isLoading ? 'grayscale blur-md' : 'grayscale-0 blur-0'
-        }`}
-        layout="fill"
-        objectFit="cover"
-        alt="Project Thumbnail"
-        onLoadingComplete={() => setIsLoading(false)}
-      />
-    </div>
+    <ResponsiveImage
+      src={thumbnailSrc}
+      className={`relative w-full h-44 xs:h-36 rounded-lg overflow-hidden group-hover:blur-[1px] drop-shadow-lg cursor-pointer transition-transform duration-200 ${className}`}
+      imageClassName={`duration-200 ease-in-out ${
+        isLoading ? 'grayscale blur-md' : 'grayscale-0 blur-0'
+      }`}
+      alt="Project Thumbnail"
+      onLoadingComplete={() => setIsLoading(false)}
+    />
   )
 }
 
