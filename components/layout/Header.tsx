@@ -1,7 +1,12 @@
 import routes from 'config/routes'
 import useWindowScroll from 'lib/hooks/useWindowScroll'
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+
+const ThemeButton = dynamic(() => import('components/buttons/ThemeButton'), {
+  ssr: false,
+})
 
 const navigationLinks: { title: string; href: string }[] = [
   {
@@ -27,18 +32,19 @@ const Header = () => {
     <header
       className={`sticky top-0 z-50 w-full ${
         pageYScrollOffset > BACKDROP_BLUR_THRESHOLD_VALUE &&
-        'backdrop-blur-md bg-white/30'
+        'backdrop-blur-md bg-white/30 dark:bg-slate-700/10'
       }`}
     >
-      <div className="flex justify-between max-w-2xl px-2 py-3 mx-auto">
+      <div className="flex items-center justify-between max-w-2xl px-4 py-3 mx-auto">
         <Link href={routes.home}>
           <h2 className="font-semibold cursor-pointer">👨🏻‍💻 Gionatha Sturba</h2>
         </Link>
         <div className="flex items-center gap-x-4">
+          <ThemeButton />
           {navigationLinks.map(({ title, href }) => (
             <Link key={title} href={href}>
               <a
-                className={`text-sm text-black md:text-base hover:scale-105 transition-transform duration-100 ${
+                className={`text-sm text-black dark:text-white md:text-base hover:scale-105 transition-transform duration-100 ${
                   router.pathname === href ? 'font-semibold' : 'font-normal'
                 }`}
               >

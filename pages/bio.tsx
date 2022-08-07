@@ -31,7 +31,7 @@ const ShortBio = ({ className }: { className?: string }) => {
       </li>
       <li>
         <strong className="mr-1.5">2018 - 2022</strong> Working full time as
-        Java Backend Engineer 👨🏻‍💻 for an Italian Company
+        Java Backend Developer 👨🏻‍💻 for an Italian Company
       </li>
       <li>
         <strong className="mr-1.5">2022 - present</strong> Working as a
@@ -44,12 +44,12 @@ const ShortBio = ({ className }: { className?: string }) => {
 const BioArticle = ({ className }: { className?: string }) => {
   return (
     <article className={className}>
-      <p className="text-sm leading-7 tracking-normal">
-        My career as a <strong>Software Engineer</strong> started back when i
+      <p className="leading-7 tracking-normal ">
+        My career as a <strong>Software Developer</strong> started back when i
         began to study Computer Science at the University of Pisa 🇮🇹
         <br /> <br />
         After i finished my studies, i started working as a{' '}
-        <strong>Java Backend Engineer</strong> for an Italian Company 🇮🇹, where
+        <strong>Java Backend Developer</strong> for an Italian Company 🇮🇹, where
         i worked in different kind of projects: from pure Enterprise
         Applications to <strong>IoT</strong> Applications 📍. <br />
         Back then my tech stack was mostly based on Java and Spring Boot ♨️ (for
