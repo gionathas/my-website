@@ -18,9 +18,9 @@ const OverviewHeader = () => {
   return (
     <div className="flex items-center justify-between">
       <div>
-        <h2 className="text-xl font-semibold">Gionatha Sturba</h2>
+        <h2 className="text-2xl font-semibold">Gionatha Sturba</h2>
         <p className="text-sm font-light">
-          Full Stack Engineer, SaaS Developer
+          Full Stack Developer, SaaS Developer
         </p>
       </div>
       <ResponsiveImage
@@ -37,13 +37,20 @@ const OverviewArticle = () => {
   return (
     <article className="text-[15px] leading-relaxed tracking-normal">
       Welcome there 👋🏻 <br />
-      I&apos;m Gionatha, a freelancer <strong>Full Stack Engineer</strong>,
+      I&apos;m Gionatha, a freelancer <strong>
+        Full Stack Developer 👨🏻‍💻
+      </strong>{' '}
       based in <strong>Italy 🇮🇹</strong>
-      <br /> I&apos;m passionate about building digital services 👨🏻‍💻 (also known
-      as <strong>SaaS</strong> applications) to help the community solve
-      specific problems.
+      <br /> I&apos;m passionate about building digital services (also known as{' '}
+      <strong>SaaS</strong> applications) to help the community solve specific
+      problems.
       <br /> I ❤️ sharing my knowledge and works on{' '}
-      <a href={socials.youtube} target="_blank" rel="noreferrer">
+      <a
+        className="link"
+        href={socials.youtube}
+        target="_blank"
+        rel="noreferrer"
+      >
         Youtube
       </a>{' '}
       🎥

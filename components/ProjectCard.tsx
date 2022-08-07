@@ -16,7 +16,7 @@ const ProjectCard = ({ project, className = '' }: ProjectCardProps) => {
     <a
       href={project.url}
       target="_blank"
-      className={`text-black hover:no-underline group ${className}`}
+      className={`text-black dark:text-white hover:no-underline group ${className}`}
       rel="noreferrer"
     >
       <ProjectThumbnail
@@ -47,7 +47,7 @@ const ProjectThumbnail = ({
   return (
     <ResponsiveImage
       src={thumbnailSrc}
-      className={`relative w-full h-44 xs:h-36 rounded-lg overflow-hidden group-hover:blur-[1px] drop-shadow-lg cursor-pointer transition-transform duration-200 ${className}`}
+      className={`relative w-full h-56 xs:h-36 rounded-lg overflow-hidden group-hover:blur-[1px] drop-shadow-lg cursor-pointer transition-transform duration-200 ${className}`}
       imageClassName={`duration-200 ease-in-out ${
         isLoading ? 'grayscale blur-md' : 'grayscale-0 blur-0'
       }`}
