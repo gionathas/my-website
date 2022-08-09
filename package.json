@@ -1,6 +1,6 @@
 {
   "name": "gionatha-website",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -13,7 +13,8 @@
     "next-themes": "^0.2.0",
     "nextjs-google-analytics": "^1.2.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sharp": "^0.30.7"
   },
   "devDependencies": {
     "@types/node": "18.0.1",
