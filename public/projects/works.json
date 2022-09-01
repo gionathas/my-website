@@ -12,6 +12,13 @@
     "url": "https://tmdb-nu.vercel.app/",
     "github": "https://github.com/gionny96/tmdb"
   },
+  "kanban-board": {
+    "title": "DnD Kanban",
+    "description": "A modern drag and droppable Kanban Board",
+    "thumbnailSrc": "/images/thumbnails/youtube/kanban-board.png",
+    "url": "https://dnd-kanban-board.vercel.app/",
+    "github": "https://github.com/gionny96/dnd-kanban-board"
+  },
   "speed-typing": {
     "title": "Speed Typing",
     "description": "Type the words as fast as you can, without making errors",

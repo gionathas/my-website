@@ -4,5 +4,11 @@
     "description": "",
     "thumbnailSrc": "/images/thumbnails/youtube/speed-typing.png",
     "url": "https://www.youtube.com/watch?v=oc7BMlIU3VY"
+  },
+  "kanban_board": {
+    "title": "Build a drag and droppable Kanban Board",
+    "description": "",
+    "thumbnailSrc": "/images/thumbnails/youtube/kanban-board.png",
+    "url": "https://www.youtube.com/watch?v=9MKFnOKmihE"
   }
 }
