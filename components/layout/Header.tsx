@@ -39,20 +39,22 @@ const Header = () => {
         <Link href={routes.home}>
           <h2 className="font-semibold cursor-pointer">👨🏻‍💻 Gionatha Sturba</h2>
         </Link>
-        <div className="flex items-center gap-x-4">
+        <nav className="flex items-center gap-x-4">
           <ThemeButton />
           {navigationLinks.map(({ title, href }) => (
             <Link key={title} href={href}>
               <a
                 className={`text-sm text-black dark:text-white md:text-base hover:scale-105 transition-transform duration-100 ${
-                  router.pathname === href ? 'font-semibold' : 'font-normal'
+                  router.pathname === href
+                    ? 'font-bold underline'
+                    : 'font-normal'
                 }`}
               >
                 {title}
               </a>
             </Link>
           ))}
-        </div>
+        </nav>
       </div>
     </header>
   )

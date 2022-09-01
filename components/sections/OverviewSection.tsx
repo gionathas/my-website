@@ -18,13 +18,11 @@ const OverviewHeader = () => {
   return (
     <div className="flex items-center justify-between">
       <div>
-        <h2 className="text-2xl font-semibold">Gionatha Sturba</h2>
-        <p className="text-sm font-light">
-          Full Stack Developer, SaaS Developer
-        </p>
+        <h2 className="text-3xl font-semibold">Gionatha Sturba</h2>
+        <p className="font-light">Full Stack Developer, SaaS Developer</p>
       </div>
       <ResponsiveImage
-        className="w-20 h-20 rounded-full ring-2 ring-orange-500/80"
+        className="w-24 h-24 rounded-full ring-2 ring-orange-500/80"
         src={ProfileImage}
         alt="profile"
         placeholder="blur"
@@ -35,7 +33,7 @@ const OverviewHeader = () => {
 
 const OverviewArticle = () => {
   return (
-    <article className="text-[15px] leading-relaxed tracking-normal">
+    <article className="text-[16px] mt-4 md:mt-2 leading-relaxed tracking-normal">
       Welcome there 👋🏻 <br />
       I&apos;m Gionatha, a freelancer <strong>
         Full Stack Developer 👨🏻‍💻
