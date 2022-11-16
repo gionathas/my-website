@@ -6,7 +6,7 @@ import {
   ProjectsPreviewsContent,
 } from '../ProjectPreviews'
 
-const qwestions = works.qwestions
+const featbacks = works.featbacks
 const tmdb = works.tmdb
 
 const LatestWorks = ({ className = '' }: { className?: string }) => {
@@ -17,7 +17,7 @@ const LatestWorks = ({ className = '' }: { className?: string }) => {
       viewAllHref={routes.works}
     >
       <ProjectsPreviewsContent className="mt-4">
-        <ProjectCard project={qwestions} className="flex-1" />
+        <ProjectCard project={featbacks} className="flex-1" />
         <ProjectCard project={tmdb} className="flex-1" />
       </ProjectsPreviewsContent>
     </ProjectPreviewsSection>

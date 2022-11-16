@@ -11,7 +11,7 @@ import SocialLink from '../SocialLink'
 
 const Footer = () => {
   return (
-    <footer className="w-full mt-20">
+    <footer className="w-full mt-20 mb-4">
       <h4 className="text-sm font-light text-center text-neutral-500">
         © 2022 Gionatha Sturba. All Rights Reserved.
       </h4>
@@ -47,6 +47,16 @@ const Footer = () => {
           href={social.discord}
         />
       </ul>
+      <div className="text-center">
+        <a
+          className="text-sm text-neutral-500 dark:text-neutral-500 hover:no-underline"
+          href="https://bit.ly/3g6iSi7"
+          target={'_blank'}
+          rel="noreferrer"
+        >
+          Privacy Policy
+        </a>
+      </div>
     </footer>
   )
 }

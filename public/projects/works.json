@@ -1,4 +1,10 @@
 {
+  "featbacks": {
+    "title": "Featbacks",
+    "description": "An open platform to collect feedbacks",
+    "thumbnailSrc": "/images/thumbnails/featbacks.png",
+    "url": "https://featbacks.com"
+  },
   "qwestions": {
     "title": "Qwestions",
     "description": "An open platform to ask and answer questions",
