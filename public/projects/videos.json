@@ -10,5 +10,11 @@
     "description": "",
     "thumbnailSrc": "/images/thumbnails/youtube/kanban-board.png",
     "url": "https://www.youtube.com/watch?v=9MKFnOKmihE"
+  },
+  "featbacks": {
+    "title": "I built a platform for collecting feedbacks",
+    "description": "",
+    "thumbnailSrc": "/images/thumbnails/youtube/featbacks.png",
+    "url": "https://youtu.be/2ZNDmcSLDnw"
   }
 }
