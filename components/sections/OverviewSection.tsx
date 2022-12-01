@@ -25,7 +25,6 @@ const OverviewHeader = () => {
         className="w-24 h-24 rounded-full ring-2 ring-orange-500/80"
         src={ProfileImage}
         alt="profile"
-        placeholder="blur"
       />
     </div>
   )
@@ -53,12 +52,12 @@ const OverviewArticle = () => {
       </a>{' '}
       🎥
       <br /> <br />
-      Want to know more about me ?{' '}
+      Want to know more about me?{' '}
       <Link className="link" href={routes.bio}>
         Read my Bio
       </Link>{' '}
       <br />
-      Want to get in touch ?{' '}
+      Want to get in touch?{' '}
       <Link className="link" href={routes.contacts}>
         Contact me
       </Link>

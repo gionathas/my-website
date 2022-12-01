@@ -15,7 +15,7 @@ const LatestVideos = ({ className }: { className?: string }) => {
       externalLink
     >
       <ProjectsPreviewsContent className="mt-4">
-        <ProjectCard project={videos.featbacks} className="flex-1" />
+        <ProjectCard project={videos.fullstackApp} className="flex-1" />
         <ProjectCard project={videos.kanban_board} className="flex-1" />
       </ProjectsPreviewsContent>
     </ProjectPreviewsSection>
