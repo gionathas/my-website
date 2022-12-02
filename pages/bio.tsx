@@ -11,7 +11,6 @@ const BiographyPage: NextPage = () => {
         objectPosition="100% 70%"
         alt="bio profile"
         quality={100}
-        placeholder="blur"
       />
       <ShortBio className="mt-5" />
       <BioArticle className="mt-8" />

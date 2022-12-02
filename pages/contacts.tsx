@@ -19,7 +19,6 @@ const ContactsPage: NextPage = () => {
         className="w-40 h-40"
         src={ProfileImage}
         alt="contacts profile"
-        placeholder="blur"
       />
       <ul className="flex flex-col items-start gap-y-1">
         <SocialLink

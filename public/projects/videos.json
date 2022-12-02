@@ -16,5 +16,11 @@
     "description": "",
     "thumbnailSrc": "/images/thumbnails/youtube/featbacks.png",
     "url": "https://youtu.be/2ZNDmcSLDnw"
+  },
+  "fullstackApp": {
+    "title": "How i build a modern full stack application",
+    "description": "",
+    "thumbnailSrc": "/images/thumbnails/youtube/fullstack-app.png",
+    "url": "https://youtu.be/e_VA7-fhakI"
   }
 }
