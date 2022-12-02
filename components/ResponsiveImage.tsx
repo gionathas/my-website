@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 
 type OwnProps = {
   alt: string
@@ -18,13 +18,17 @@ const ResponsiveImage = ({
   onClick,
   ...rest
 }: ResponsiveImageProps) => {
+  const [isLoading, setIsLoading] = useState(true)
   return (
     <div className={`relative overflow-hidden ${className}`} onClick={onClick}>
       <Image
         alt={alt}
-        className={imageClassName}
+        className={`duration-200 ease-in-out ${imageClassName} ${
+          isLoading ? 'grayscale blur-md' : 'grayscale-0 blur-0'
+        }`}
         objectFit="cover"
         layout="fill"
+        onLoadingComplete={() => setIsLoading(false)}
         {...rest}
       />
     </div>
