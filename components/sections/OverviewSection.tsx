@@ -1,7 +1,5 @@
 import ResponsiveImage from 'components/ResponsiveImage'
 
-import routes from 'config/routes'
-import Link from 'next/link'
 import ProfileImage from 'public/images/profile/main_profile.png'
 import socials from 'public/social.json'
 
@@ -16,51 +14,37 @@ const OverviewSection = ({ className = '' }: { className?: string }) => {
 
 const OverviewHeader = () => {
   return (
-    <div className="flex items-center justify-between">
-      <div>
-        <h2 className="text-3xl font-semibold">Gionatha Sturba</h2>
-        <p className="font-light">Full Stack Developer, SaaS Developer</p>
-      </div>
+    <div className="flex flex-col items-center lg:justify-between lg:flex-row-reverse">
       <ResponsiveImage
-        className="w-24 h-24 rounded-full ring-2 ring-orange-500/80"
+        className="w-24 h-24 rounded-full"
         src={ProfileImage}
         alt="profile"
       />
+      <div className="mt-2 lg:mt-0">
+        <h2 className="text-4xl font-bold">Gionatha Sturba</h2>
+        <p className="font-light dark:text-gray-400">
+          Full Stack Developer, SaaS Developer
+        </p>
+      </div>
     </div>
   )
 }
 
 const OverviewArticle = () => {
   return (
-    <article className="text-[16px] mt-4 md:mt-2 leading-relaxed tracking-normal">
-      Welcome there 👋🏻 <br />
-      I&apos;m Gionatha, a freelancer <strong>
-        Full Stack Developer 👨🏻‍💻
-      </strong>{' '}
-      based in <strong>Italy 🇮🇹</strong>
-      <br /> I&apos;m passionate about building digital services (also known as{' '}
-      <strong>SaaS</strong> applications) to help the community solve specific
-      problems.
-      <br /> I ❤️ sharing my knowledge and works on{' '}
-      <a
-        className="link"
-        href={socials.youtube}
-        target="_blank"
-        rel="noreferrer"
-      >
-        Youtube
-      </a>{' '}
-      🎥
-      <br /> <br />
-      Want to know more about me?{' '}
-      <Link className="link" href={routes.bio}>
-        Read my Bio
-      </Link>{' '}
-      <br />
-      Want to get in touch?{' '}
-      <Link className="link" href={routes.contacts}>
-        Contact me
-      </Link>
+    <article className="text-[16px] text-justify xs:text-left text-gray-800 dark:text-gray-400 mt-6 sm:mt-4 ">
+      <p className="leading-relaxed">
+        Passionate about building digital services to help the community solve
+        specific problems. I ❤️ sharing my knowledge and works on{' '}
+        <a
+          className="link"
+          href={socials.youtube}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Youtube
+        </a>
+      </p>
     </article>
   )
 }

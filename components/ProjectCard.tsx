@@ -15,7 +15,7 @@ const ProjectCard = ({ project, className = '' }: ProjectCardProps) => {
     <a
       href={project.url}
       target="_blank"
-      className={`text-black dark:text-white hover:no-underline group ${className}`}
+      className={`text-gray-900 dark:text-white hover:no-underline group ${className}`}
       rel="noreferrer"
     >
       <ProjectThumbnail
@@ -24,8 +24,10 @@ const ProjectCard = ({ project, className = '' }: ProjectCardProps) => {
         className="flex-1"
       />
       <div className="mt-2 text-center">
-        <h3 className="text-base font-semibold">{project.title}</h3>
-        <p className="mt-1 text-sm dark:text-gray-300">{project.description}</p>
+        <h3 className="text-base font-bold">{project.title}</h3>
+        <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+          {project.description}
+        </p>
       </div>
     </a>
   )
@@ -44,7 +46,7 @@ const ProjectThumbnail = ({
   return (
     <ResponsiveImage
       src={thumbnailSrc}
-      className={`relative w-full h-56 xs:h-36 rounded-lg overflow-hidden group-hover:blur-[1px] drop-shadow-lg cursor-pointer transition-transform duration-200 ${className}`}
+      className={`relative w-full h-44 ring-1 ring-gray-50/10 xs:h-36 rounded-lg overflow-hidden xs:group-hover:scale-105 drop-shadow-md cursor-pointer transition-transform duration-200 ${className}`}
       alt="Project Thumbnail"
     />
   )
