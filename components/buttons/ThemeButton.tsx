@@ -10,6 +10,7 @@ const ThemeButton = () => {
 
   return (
     <button
+      aria-label="toggle-dark-mode"
       className={`p-2 text-black rounded ${
         isDark ? 'bg-slate-700/70' : 'bg-yellow-300'
       } `}

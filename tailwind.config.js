@@ -13,11 +13,6 @@ module.exports = {
       xs: '475px',
       ...defaultTheme.screens,
     },
-    extend: {
-      colors: {
-        white: '#EEEEEE',
-      },
-    },
   },
   plugins: [],
 }

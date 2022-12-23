@@ -27,7 +27,7 @@
   },
   "speed-typing": {
     "title": "Speed Typing",
-    "description": "Type the words as fast as you can, without making errors",
+    "description": "Type the words as fast as you can without making errors",
     "thumbnailSrc": "/images/thumbnails/youtube/speed-typing.png",
     "url": "https://speed-typing-ten.vercel.app/",
     "github": "https://github.com/gionny96/speed-typing"

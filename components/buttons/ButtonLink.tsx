@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { GoChevronRight } from 'react-icons/go'
+import { HiArrowNarrowRight } from 'react-icons/hi'
 
 type ButtonLinkProps = {
   href: string
@@ -16,11 +16,11 @@ const ButtonLink = ({
   const Anchor = (
     <a
       href={href}
-      className="flex items-center justify-between w-24 font-medium px-3 py-1.5 text-white bg-blue-500  rounded-md hover:no-underline hover:bg-blue-600 dark:bg-orange-500 dark:text-black text-sm dark:hover:bg-orange-600"
+      className="flex items-center font-medium text-gray-700 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 hover:no-underline"
       {...rest}
     >
       {children}
-      <GoChevronRight className="w-4 h-4" />
+      <HiArrowNarrowRight className="w-4 h-4 ml-2" />
     </a>
   )
 
