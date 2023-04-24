@@ -26,11 +26,11 @@ const ShortBio = ({ className }: { className?: string }) => {
       </li>
       <li>
         <strong className="mr-1.5">2015 - 2018</strong> Graduating in Computer
-        Science 💻 at University of Pisa 🇮🇹
+        Science at University of Pisa
       </li>
       <li>
-        <strong className="mr-1.5">2018 - 2022</strong> Working full time as
-        Java Backend Developer 👨🏻‍💻 for an Italian Company
+        <strong className="mr-1.5">2018 - 2022</strong> Working full time as a
+        Java Backend Developer
       </li>
       <li>
         <strong className="mr-1.5">2022 - present</strong> Working as a
@@ -44,31 +44,27 @@ const BioArticle = ({ className }: { className?: string }) => {
   return (
     <article className={className}>
       <p className="leading-7 tracking-normal ">
-        My career as a <strong>Software Developer</strong> started back when i
-        began to study Computer Science at the University of Pisa 🇮🇹
+        My career as a <strong>Software Developer</strong> started back then
+        when i began to study CS at the University of Pisa.
         <br /> <br />
-        After i finished my studies, i started working as a{' '}
-        <strong>Java Backend Developer</strong> for an Italian Company 🇮🇹, where
-        i worked in different kind of projects: from pure Enterprise
-        Applications to <strong>IoT</strong> Applications 📍. <br />
-        Back then my tech stack was mostly based on Java and Spring Boot ♨️ (for
-        the development phase), while for the deployment phase we used Docker
-        and Kubernetes 🐳 <br /> <br />
-        It was a nice experience, it helped me a lot to grow as a SWE and to
-        taste what it means to work in the world of Software Development. <br />
+        After completing the studies I started working as a{' '}
+        <strong>Java Backend Developer</strong> for an italian company, where I
+        was involved in different kind of projects: from pure enterprise
+        applications to IoT infrastructures. <br /> <br />
+        It was a great first experience, lasted for more than 3 years, in which
+        I grew both as a software engineer and as a person. <br />
         <br />
-        At some point i started realizing that i wanted something different for
-        my career, i wanted to set out on my own and see what I could achieve
-        with my skills alone 🚶🏻 <br />
+        At some point i began realizing that i wanted something different for my
+        career. I wanted to set out on my own and see what I could achieve with
+        my skills alone. <br /> <br />
         So i decided to left my daily job and started to learn new tech skills
-        related to the Web development 🌐. <br /> <br />
-        I started learning React, Javascript, Typescript, NodeJS etc.. and began
-        to build my own projects 🔨. This gave me the opportunity to be able to
-        express my creativity under the form of digital services that everyone
-        could use. <br /> <br />
-        Now i work as a freelancer, but i&apos;m also open for new exciting
-        opportunities that can come. <br /> <br />
-        Gionatha
+        mainly related to Web development. <br /> <br />
+        While studying some fancy new stuff i&apos;ve also started building my
+        own projects and showcasing the results on Youtube, to both share my
+        experiences and to take the opportunity to teach what i&apos;ve learned.
+        <br /> <br />
+        Currently i&apos;m working as a freelancer, but i&apos;m open for new
+        exciting job opportunities that could come in the future. <br /> <br />
       </p>
     </article>
   )
