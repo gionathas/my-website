@@ -22,5 +22,11 @@
     "description": "",
     "thumbnailSrc": "/images/thumbnails/youtube/fullstack-app.png",
     "url": "https://youtu.be/e_VA7-fhakI"
+  },
+  "treecraft": {
+    "title": "Making Minecraft in ThreeJS",
+    "description": "",
+    "thumbnailSrc": "/images/thumbnails/youtube/threecraft.png",
+    "url": "https://youtu.be/DVkXZPzopEs"
   }
 }

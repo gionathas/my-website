@@ -10,7 +10,7 @@ const BiographyPage: NextPage = () => {
         src={BioImage}
         objectPosition="100% 70%"
         alt="bio profile"
-        quality={100}
+        priority={true}
       />
       <ShortBio className="mt-5" />
       <BioArticle className="mt-8" />
