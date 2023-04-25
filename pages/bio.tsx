@@ -45,12 +45,12 @@ const BioArticle = ({ className }: { className?: string }) => {
     <article className={className}>
       <p className="leading-7 tracking-normal ">
         My career as a <strong>Software Developer</strong> started back then
-        when i began to study CS at the University of Pisa.
+        when i began studying CS at the University of Pisa.
         <br /> <br />
         After completing the studies I started working as a{' '}
         <strong>Java Backend Developer</strong> for an italian company, where I
         was involved in different kind of projects: from pure enterprise
-        applications to IoT infrastructures. <br /> <br />
+        applications development to IoT infrastructures. <br /> <br />
         It was a great first experience, lasted for more than 3 years, in which
         I grew both as a software engineer and as a person. <br />
         <br />
