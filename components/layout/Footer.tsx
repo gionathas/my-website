@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer className="w-full mt-20 mb-4">
       <h4 className="text-sm font-light text-center text-neutral-500">
-        © 2022 Gionatha Sturba. All Rights Reserved.
+        {`© ${new Date().getFullYear()}  Gionatha Sturba. All Rights Reserved.`}
       </h4>
       <ul className="flex items-center justify-center my-2 text-black gap-x-2">
         <SocialLink
