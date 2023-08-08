@@ -17,39 +17,39 @@ const Footer = () => {
       </h4>
       <ul className="flex items-center justify-center my-2 text-black gap-x-2">
         <SocialLink
-          className="text-black dark:text-white"
+          className="text-white"
           icon={AiFillYoutube}
           href={social.youtube}
         />
         <SocialLink
-          className="text-black dark:text-white"
+          className="text-white"
           icon={AiFillLinkedin}
           href={social.linkedin}
         />
         <SocialLink
-          className="text-black dark:text-white"
+          className="text-white"
           icon={AiFillGithub}
           href={social.github}
         />
         <SocialLink
-          className="text-black dark:text-white"
+          className="text-white"
           icon={AiFillFacebook}
           href={social.facebook}
         />
         <SocialLink
-          className="text-black dark:text-white"
+          className="text-white"
           icon={AiOutlineInstagram}
           href={social.instagram}
         />
         <SocialLink
-          className="text-black dark:text-white"
+          className="text-white"
           icon={BsDiscord}
           href={social.discord}
         />
       </ul>
       <div className="text-center">
         <a
-          className="text-sm text-neutral-500 dark:text-neutral-500 hover:no-underline"
+          className="text-sm text-neutral-500 hover:no-underline"
           href="https://bit.ly/3g6iSi7"
           target={'_blank'}
           rel="noreferrer"

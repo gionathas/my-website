@@ -6,7 +6,7 @@ const BiographyPage: NextPage = () => {
   return (
     <>
       <ResponsiveImage
-        className="w-full rounded-md h-72"
+        className="hidden w-full rounded-md md:block h-72"
         src={BioImage}
         objectPosition="100% 70%"
         alt="bio profile"
@@ -29,12 +29,16 @@ const ShortBio = ({ className }: { className?: string }) => {
         Science at University of Pisa
       </li>
       <li>
-        <strong className="mr-1.5">2018 - 2022</strong> Working full time as a
-        Java Backend Developer
+        <strong className="mr-1.5">2018 - 2022</strong> Working as Java Backend
+        Developer
       </li>
       <li>
-        <strong className="mr-1.5">2022 - present</strong> Working as a
-        freelancer
+        <strong className="mr-1.5">2022 - 2023</strong> Self-taught education /
+        Portfolio building
+      </li>
+      <li>
+        <strong className="mr-1.5">2023 - present</strong> Working as Frontend
+        Engineer at ProntoPro
       </li>
     </ul>
   )
@@ -44,27 +48,29 @@ const BioArticle = ({ className }: { className?: string }) => {
   return (
     <article className={className}>
       <p className="leading-7 tracking-normal ">
-        My career as a <strong>Software Developer</strong> started back then
-        when i began studying CS at the University of Pisa.
+        I embarked on my journey as a <b>Software Engineer</b> during my time at
+        the University of Pisa, where I pursued a degree in Computer Science.
         <br /> <br />
-        After completing the studies I started working as a{' '}
-        <strong>Java Backend Developer</strong> for an italian company, where I
-        was involved in different kind of projects: from pure enterprise
-        applications development to IoT infrastructures. <br /> <br />
-        It was a great first experience, lasted for more than 3 years, in which
-        I grew both as a software engineer and as a person. <br />
-        <br />
-        At some point i began realizing that i wanted something different for my
-        career. I wanted to set out on my own and see what I could achieve with
-        my skills alone. <br /> <br />
-        So i decided to left my daily job and started to learn new tech skills
-        mainly related to Web development. <br /> <br />
-        While studying some fancy new stuff i&apos;ve also started building my
-        own projects and showcasing the results on Youtube, to both share my
-        experiences and to take the opportunity to teach what i&apos;ve learned.
+        Upon completing my studies, I transitioned into the role of a{' '}
+        <b>Java Backend Developer</b> for a local company. This initial
+        professional experience enriched me with diverse IT projects, fostering
+        connections and enabling me to evolve both as an engineer and an
+        individual.
         <br /> <br />
-        Currently i&apos;m working as a freelancer, but i&apos;m open for new
-        exciting job opportunities that could come in the future. <br /> <br />
+        Yet, a desire for a new chapter in my career began to blossom within me.
+        I yearned for a venture that would allow me to explore my potential
+        independently. This yearning led me to step away from my routine job and
+        dive into acquiring fresh tech skills, primarily centered around Web
+        development.
+        <br /> <br />
+        Amidst mastering these new and exciting technologies, I also dedicated
+        myself to crafting a portfolio that showcased my capabilities. Through
+        projects that I meticulously developed, I shared my accomplishments on
+        my personal webpage and notably on my <b>YouTube</b> channel.
+        <br /> <br />A year of unwavering dedication bore fruit when I secured
+        the role of a <b>Frontend Engineer</b> at <b>ProntoPro</b>, my current
+        professional home. Here, I continue to channel my passion for technology
+        into meaningful contributions.
       </p>
     </article>
   )

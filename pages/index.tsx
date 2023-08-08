@@ -1,14 +1,14 @@
-import LatestWorksSection from 'components/sections/LatestWorksSection'
+import PopularPostsSection from 'components/sections/LatestVideos'
+import LatestWorksSection from 'components/sections/LatestWorks'
 import OverviewSection from 'components/sections/OverviewSection'
-import PopularPostsSection from 'components/sections/PopularPostsSection'
 import type { NextPage } from 'next'
 
 const HomePage: NextPage = () => {
   return (
     <>
       <OverviewSection />
-      <LatestWorksSection className="mt-36 xs:mt-20" />
-      <PopularPostsSection className="mt-36 xs:mt-24" />
+      <LatestWorksSection className="mt-20" />
+      <PopularPostsSection className="mt-36 md:mt-20" />
     </>
   )
 }

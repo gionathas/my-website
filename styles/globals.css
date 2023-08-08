@@ -4,10 +4,10 @@
 
 @layer base {
   body {
-    @apply bg-neutral-50 antialiased dark:bg-[#111111] dark:text-white;
+    @apply antialiased bg-[#111111] text-white;
   }
 
   a {
-    @apply text-blue-500 dark:text-orange-400 hover:underline underline-offset-4;
+    @apply text-orange-400 hover:underline underline-offset-4;
   }
 }
