@@ -29,8 +29,8 @@ export const ProjectPreviewsSection = ({
 
   return (
     <section className={className}>
-      <div className="flex items-baseline justify-between">
-        <h2 className="text-2xl font-bold">{title}</h2>
+      <div className="flex items-baseline justify-between mb-5">
+        <h2 className="text-xl font-bold">{title}</h2>
         {externalLink ? viewAllExternalLink : viewAllInternalLink}
       </div>
       {children}
@@ -46,7 +46,7 @@ export const ProjectsPreviewsContent = ({
   className?: string
 }) => {
   return (
-    <div className={`flex flex-col gap-y-5 gap-x-3 xs:flex-row  ${className}`}>
+    <div className={`flex flex-col gap-y-9 gap-x-3 xs:flex-row  ${className}`}>
       {children}
     </div>
   )

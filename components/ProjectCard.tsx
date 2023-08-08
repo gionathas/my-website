@@ -15,7 +15,7 @@ const ProjectCard = ({ project, className = '' }: ProjectCardProps) => {
     <a
       href={project.url}
       target="_blank"
-      className={`text-gray-900 dark:text-white hover:no-underline group ${className}`}
+      className={`text-white hover:no-underline group ${className}`}
       rel="noreferrer"
     >
       <ProjectThumbnail
@@ -25,9 +25,7 @@ const ProjectCard = ({ project, className = '' }: ProjectCardProps) => {
       />
       <div className="mt-2 text-center">
         <h3 className="text-base font-bold">{project.title}</h3>
-        <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-          {project.description}
-        </p>
+        <p className="mt-1 text-sm text-gray-400">{project.description}</p>
       </div>
     </a>
   )

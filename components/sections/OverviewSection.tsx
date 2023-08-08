@@ -20,10 +20,10 @@ const OverviewHeader = () => {
         src={ProfileImage}
         alt="profile"
       />
-      <div className="mt-2 lg:mt-0">
-        <h2 className="text-4xl font-bold">Gionatha Sturba</h2>
-        <p className="font-light dark:text-gray-400">
-          Full Stack Developer, SaaS Developer
+      <div className="mt-2 text-center lg:mt-0 xl:text-left">
+        <h2 className="text-3xl font-bold ">Gionatha Sturba</h2>
+        <p className="font-light text-gray-400">
+          Frontend Engineer, Content Creator
         </p>
       </div>
     </div>
@@ -32,18 +32,23 @@ const OverviewHeader = () => {
 
 const OverviewArticle = () => {
   return (
-    <article className="text-[16px] text-justify xs:text-left text-gray-800 dark:text-gray-400 mt-6 sm:mt-4 ">
+    <article className="mt-6 text-base text-center text-gray-400 xs:text-left sm:mt-4 ">
       <p className="leading-relaxed">
-        Passionate about building digital services to help the community solve
-        specific problems. I ❤️ sharing my knowledge and works on{' '}
-        <a
-          className="link"
-          href={socials.youtube}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Youtube
-        </a>
+        <span>
+          Passionate about building digital services to solve daily problems.
+        </span>
+        <br />
+        <span>
+          I ❤️ sharing my knowledge and works on{' '}
+          <a
+            className="link"
+            href={socials.youtube}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Youtube
+          </a>
+        </span>
       </p>
     </article>
   )

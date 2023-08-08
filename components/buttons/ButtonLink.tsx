@@ -16,7 +16,7 @@ const ButtonLink = ({
   const Anchor = (
     <a
       href={href}
-      className="flex items-center font-medium text-gray-700 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 hover:no-underline"
+      className="flex items-center font-medium text-gray-400 transition-colors hover:text-gray-100 hover:no-underline"
       {...rest}
     >
       {children}

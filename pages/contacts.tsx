@@ -16,43 +16,29 @@ const ContactsPage: NextPage = () => {
   return (
     <div className="flex items-center justify-center gap-x-4">
       <ResponsiveImage
-        className="w-40 h-40"
+        className="hidden w-40 h-40 md:block"
         src={ProfileImage}
         alt="contacts profile"
       />
       <ul className="flex flex-col items-start gap-y-1">
         <SocialLink
-          className="text-cyan-700"
           icon={AiFillLinkedin}
           title="Linkedin"
           href={social.linkedin}
         />
+        <SocialLink icon={AiFillGithub} title="GitHub" href={social.github} />
         <SocialLink
-          className="text-cyan-700"
-          icon={AiFillGithub}
-          title="GitHub"
-          href={social.github}
-        />
-        <SocialLink
-          className="text-cyan-700"
           icon={AiFillFacebook}
           title="Facebook"
           href={social.facebook}
         />
         <SocialLink
-          className="text-cyan-700"
           icon={AiOutlineInstagram}
           title="Instagram"
           href={social.instagram}
         />
+        <SocialLink icon={BsDiscord} title="Discord" href={social.discord} />
         <SocialLink
-          className="text-cyan-700"
-          icon={BsDiscord}
-          title="Discord"
-          href={social.discord}
-        />
-        <SocialLink
-          className="text-cyan-700"
           icon={MdEmail}
           title={social.email}
           href={`mailto: ${social.email}`}

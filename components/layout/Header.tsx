@@ -33,7 +33,7 @@ const Header = () => {
     <header
       className={`sticky top-0 z-50 w-full ${
         pageYScrollOffset > BACKDROP_BLUR_THRESHOLD_VALUE &&
-        'backdrop-blur-md bg-white/30 dark:bg-slate-700/10'
+        'backdrop-blur-md bg-slate-700/10'
       }`}
     >
       <div className="flex flex-wrap items-center justify-between max-w-2xl px-4 py-3 mx-auto">
@@ -41,7 +41,7 @@ const Header = () => {
           <h2 className="font-semibold cursor-pointer">👨🏻‍💻 Gionatha Sturba</h2>
         </Link>
         <nav className="flex items-center">
-          <ThemeButton />
+          {/* <ThemeButton /> */}
           <MobileNavigation className="ml-2" />
           <DesktopNavigation className="ml-4" />
         </nav>
@@ -66,7 +66,7 @@ const MobileNavigation = ({ className }: { className?: string }) => {
       <button
         type="button"
         onClick={() => setShowMenu((show) => !show)}
-        className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden focus:outline-none ring-2 ring-gray-700/30 dark:ring-gray-400/30 hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-700"
+        className="inline-flex items-center p-2 text-sm text-gray-400 rounded-lg md:hidden focus:outline-none ring-2 ring-gray-400/30 hover:bg-gray-700"
         aria-label="toggle-mobile-navigation-menu"
         aria-controls="navigation-menu"
         aria-expanded={showMenu}
@@ -76,7 +76,7 @@ const MobileNavigation = ({ className }: { className?: string }) => {
       {showMenu && (
         <div
           id="navigation-menu"
-          className="absolute right-0 p-4 rounded-lg w-44 bg-white/90 dark:bg-gray-700/90 top-9 ring-2 ring-gray-900/40 dark:ring-gray-50/40"
+          className="absolute right-0 p-4 rounded-lg w-44 bg-gray-700/90 top-9 ring-2 ring-gray-50/40"
         >
           <NavigationLinks
             onClick={() => setShowMenu(false)}
@@ -103,7 +103,7 @@ const NavigationLinks = ({
         <Link key={title} href={href}>
           <a
             onClick={onClick}
-            className={`text-sm text-black dark:text-white md:text-base hover:scale-105 transition-transform duration-100 ${
+            className={`text-sm text-white md:text-base hover:scale-105 transition-transform duration-100 ${
               router.pathname === href ? 'font-bold underline' : 'font-normal'
             }`}
           >
