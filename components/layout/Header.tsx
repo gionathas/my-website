@@ -15,8 +15,8 @@ const navigationLinks: { title: string; href: string }[] = [
     href: routes.home,
   },
   {
-    title: 'Works',
-    href: routes.works,
+    title: 'Projects',
+    href: routes.projects,
   },
   {
     title: 'Contacts',
