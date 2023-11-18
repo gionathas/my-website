@@ -27,7 +27,7 @@ export const ProjectPreviewsSection = ({
 
   return (
     <section className={className}>
-      <div className="flex items-baseline justify-between mb-5">
+      <div className="flex items-baseline justify-between mb-5 md:mb-6">
         <h2 className="text-xl font-bold">{title}</h2>
         {externalLink ? viewAllExternalLink : viewAllInternalLink}
       </div>

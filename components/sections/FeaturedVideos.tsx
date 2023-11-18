@@ -6,11 +6,11 @@ import {
   ProjectsPreviewsContent,
 } from '../ProjectPreviews'
 
-const LatestVideos = ({ className }: { className?: string }) => {
+const FeaturedVideos = ({ className }: { className?: string }) => {
   return (
     <ProjectPreviewsSection
       className={className}
-      title={'Popular Posts 🎥'}
+      title={'Featured Posts 🍿'}
       viewAllHref={social.youtube}
       externalLink
     >
@@ -22,4 +22,4 @@ const LatestVideos = ({ className }: { className?: string }) => {
   )
 }
 
-export default LatestVideos
+export default FeaturedVideos

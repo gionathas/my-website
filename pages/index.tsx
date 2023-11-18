@@ -1,5 +1,5 @@
-import PopularPostsSection from 'components/sections/LatestVideos'
-import LatestWorksSection from 'components/sections/LatestWorks'
+import PopularPostsSection from 'components/sections/FeaturedVideos'
+import LatestWorksSection from 'components/sections/FeaturedProjects'
 import OverviewSection from 'components/sections/OverviewSection'
 import type { NextPage } from 'next'
 
