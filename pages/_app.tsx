@@ -39,8 +39,12 @@ const MetaTags = () => {
 
       <meta
         property="og:image"
-        content="https://gionathas.dev/images/og-image.png"
+        content="https://gionathas.dev/images/og_image.png"
       />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:type" content="image/png" />
+
       <meta property="og:url" content="https://gionathas.dev/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Gionatha Sturba" />
