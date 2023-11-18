@@ -1,14 +1,18 @@
+import Link from 'components/Link'
 import routes from 'config/routes'
 import useWindowScroll from 'lib/hooks/useWindowScroll'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
 const navigationLinks: { title: string; href: string }[] = [
+  // {
+  //   title: 'Bio',
+  //   href: routes.bio,
+  // },
   {
-    title: 'Bio',
-    href: routes.bio,
+    title: 'Home',
+    href: routes.home,
   },
   {
     title: 'Works',
@@ -32,23 +36,18 @@ const Header = () => {
       }`}
     >
       <div className="flex flex-wrap items-center justify-between max-w-2xl px-4 py-3 mx-auto">
-        <Link href={routes.home} className="no-underline">
-          <h2 className="font-semibold cursor-pointer">👨🏻‍💻 Gionatha Sturba</h2>
-        </Link>
         <nav className="flex items-center">
-          <MobileNavigation className="ml-2" />
-          <DesktopNavigation className="ml-4" />
+          {/* <MobileNavigation className="ml-2" /> */}
+          <RowNavigationLayout className="p-2" />
         </nav>
       </div>
     </header>
   )
 }
 
-const DesktopNavigation = ({ className }: { className?: string }) => {
+const RowNavigationLayout = ({ className }: { className?: string }) => {
   return (
-    <NavigationLinks
-      className={`hidden sm:flex sm:items-center sm:gap-x-4 ${className}`}
-    />
+    <NavigationLinks className={`flex items-center gap-x-4 ${className}`} />
   )
 }
 
@@ -95,9 +94,7 @@ const NavigationLinks = ({
     <ul className={className}>
       {navigationLinks.map(({ title, href }) => (
         <Link
-          className={`text-sm text-white md:text-base hover:scale-105 transition-transform duration-100 ${
-            router.pathname === href ? 'font-bold underline' : 'font-normal'
-          }`}
+          active={router.pathname === href}
           onClick={handleLinkClick}
           key={title}
           href={href}
