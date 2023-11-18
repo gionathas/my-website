@@ -1,15 +1,20 @@
-import NextLink from 'next/link'
-import React from 'react'
-import { HiArrowNarrowRight } from 'react-icons/hi'
 import { LinkProps } from 'lib/types'
+import NextLink from 'next/link'
+import { HiArrowNarrowRight } from 'react-icons/hi'
 import { IconType } from 'react-icons/lib'
 
-const Link = ({ href, children, active, className, ...rest }: LinkProps) => {
+const Link = ({
+  href,
+  children,
+  active = false,
+  className = '',
+  ...rest
+}: LinkProps) => {
   return (
     <NextLink
       className={`flex items-center text-sm md:text-base font-medium text-gray-400 transition-colors hover:text-gray-100 ${
-        active && 'text-gray-100'
-      } ${className ? className : ''}`}
+        active && 'text-gray-50'
+      } ${className}`}
       href={href}
       {...rest}
     >
