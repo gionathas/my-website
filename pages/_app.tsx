@@ -5,6 +5,8 @@ import Head from 'next/head'
 import { GoogleAnalytics, usePageViews } from 'nextjs-google-analytics'
 import 'styles/globals.css'
 
+const description = 'Developer, writer and creator.'
+
 const App = ({ Component, pageProps }: AppProps) => {
   usePageViews()
 
@@ -32,13 +34,21 @@ const MetaTags = () => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
       <title>Gionatha Sturba</title>
-      <meta name="description" content="Gionatha Sturba Homepage" />
+      <meta name="description" content={description} />
       <meta name="author" content="Gionatha Sturba" />
 
+      <meta
+        property="og:image"
+        content="https://gionathas.dev/images/og-image.png"
+      />
       <meta property="og:url" content="https://gionathas.dev/" />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="Gionatha Sturba | Homepage" />
-      <meta property="og:description" content="Gionatha Sturba Homepage" />
+      <meta property="og:title" content="Gionatha Sturba" />
+      <meta property="og:description" content={description} />
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:site_name" content="Gionatha Sturba" />
+
+      <meta name="robots" content="index, follow" />
     </Head>
   )
 }

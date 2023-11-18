@@ -6,12 +6,12 @@ import {
   ProjectsPreviewsContent,
 } from '../ProjectPreviews'
 
-const LatestWorks = ({ className = '' }: { className?: string }) => {
+const FeaturedProjects = ({ className = '' }: { className?: string }) => {
   return (
     <ProjectPreviewsSection
       className={className}
-      title={'Latest Works 💎'}
-      viewAllHref={routes.works}
+      title={'Featured Projects 💎'}
+      viewAllHref={routes.projects}
     >
       <ProjectsPreviewsContent className="mt-4">
         <ProjectCard project={works.tmdb} className="flex-1" />
@@ -21,4 +21,4 @@ const LatestWorks = ({ className = '' }: { className?: string }) => {
   )
 }
 
-export default LatestWorks
+export default FeaturedProjects

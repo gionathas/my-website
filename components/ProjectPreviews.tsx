@@ -1,5 +1,5 @@
 import React from 'react'
-import ButtonLink from './buttons/ButtonLink'
+import { LinkWithRightArrow } from './Link'
 
 export type LatestSectionProps = {
   title: string
@@ -17,19 +17,17 @@ export const ProjectPreviewsSection = ({
   externalLink = false,
 }: LatestSectionProps) => {
   const viewAllExternalLink = (
-    <ButtonLink href={viewAllHref} target="_blank" rel="noreferrer">
+    <LinkWithRightArrow href={viewAllHref} target="_blank" rel="no-referrer">
       View All
-    </ButtonLink>
+    </LinkWithRightArrow>
   )
   const viewAllInternalLink = (
-    <ButtonLink href={viewAllHref} nextLink>
-      View All
-    </ButtonLink>
+    <LinkWithRightArrow href={viewAllHref}>View All</LinkWithRightArrow>
   )
 
   return (
     <section className={className}>
-      <div className="flex items-baseline justify-between mb-5">
+      <div className="flex items-baseline justify-between mb-5 md:mb-6">
         <h2 className="text-xl font-bold">{title}</h2>
         {externalLink ? viewAllExternalLink : viewAllInternalLink}
       </div>

@@ -1,6 +1,7 @@
 export default {
   home: '/',
-  bio: '/bio',
-  works: '/works',
+  // bio: '/bio',
+  projects: '/projects',
   contacts: '/contacts',
+  blog: '/blog',
 } as const

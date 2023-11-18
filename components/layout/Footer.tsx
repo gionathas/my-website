@@ -1,3 +1,4 @@
+import { SocialLink } from 'components/Link'
 import social from 'public/social.json'
 import {
   AiFillFacebook,
@@ -7,7 +8,6 @@ import {
   AiOutlineInstagram,
 } from 'react-icons/ai'
 import { BsDiscord } from 'react-icons/bs'
-import SocialLink from '../SocialLink'
 
 const Footer = () => {
   return (

@@ -1,23 +1,20 @@
+import Link from 'components/Link'
 import routes from 'config/routes'
 import useWindowScroll from 'lib/hooks/useWindowScroll'
-import dynamic from 'next/dynamic'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
-import { GiHamburgerMenu } from 'react-icons/gi'
-
-const ThemeButton = dynamic(() => import('components/buttons/ThemeButton'), {
-  ssr: false,
-})
 
 const navigationLinks: { title: string; href: string }[] = [
   {
-    title: 'Bio',
-    href: routes.bio,
+    title: 'Home',
+    href: routes.home,
   },
   {
-    title: 'Works',
-    href: routes.works,
+    title: 'Blog',
+    href: routes.blog,
+  },
+  {
+    title: 'Projects',
+    href: routes.projects,
   },
   {
     title: 'Contacts',
@@ -36,79 +33,40 @@ const Header = () => {
         'backdrop-blur-md bg-slate-700/10'
       }`}
     >
-      <div className="flex flex-wrap items-center justify-between max-w-2xl px-4 py-3 mx-auto">
-        <Link href={routes.home}>
-          <h2 className="font-semibold cursor-pointer">👨🏻‍💻 Gionatha Sturba</h2>
-        </Link>
+      <div className="flex flex-wrap items-center justify-between max-w-2xl p-5 mx-auto">
         <nav className="flex items-center">
-          {/* <ThemeButton /> */}
-          <MobileNavigation className="ml-2" />
-          <DesktopNavigation className="ml-4" />
+          <RowNavigationLayout className="p-2" />
         </nav>
       </div>
     </header>
   )
 }
 
-const DesktopNavigation = ({ className }: { className?: string }) => {
+const RowNavigationLayout = ({ className }: { className?: string }) => {
   return (
-    <NavigationLinks
-      className={`hidden sm:flex sm:items-center sm:gap-x-4 ${className}`}
-    />
-  )
-}
-
-const MobileNavigation = ({ className }: { className?: string }) => {
-  const [showMenu, setShowMenu] = useState(false)
-
-  return (
-    <div className={`relative sm:hidden ${className}`}>
-      <button
-        type="button"
-        onClick={() => setShowMenu((show) => !show)}
-        className="inline-flex items-center p-2 text-sm text-gray-400 rounded-lg md:hidden focus:outline-none ring-2 ring-gray-400/30 hover:bg-gray-700"
-        aria-label="toggle-mobile-navigation-menu"
-        aria-controls="navigation-menu"
-        aria-expanded={showMenu}
-      >
-        <GiHamburgerMenu />
-      </button>
-      {showMenu && (
-        <div
-          id="navigation-menu"
-          className="absolute right-0 p-4 rounded-lg w-44 bg-gray-700/90 top-9 ring-2 ring-gray-50/40"
-        >
-          <NavigationLinks
-            onClick={() => setShowMenu(false)}
-            className="flex flex-col items-center gap-y-2"
-          />
-        </div>
-      )}
-    </div>
+    <NavigationLinks className={`flex items-center gap-x-4 ${className}`} />
   )
 }
 
 const NavigationLinks = ({
   className,
-  onClick,
+  onLinkClick: handleLinkClick,
 }: {
   className?: string
-  onClick?: () => void
+  onLinkClick?: () => void
 }) => {
   const router = useRouter()
 
   return (
     <ul className={className}>
       {navigationLinks.map(({ title, href }) => (
-        <Link key={title} href={href}>
-          <a
-            onClick={onClick}
-            className={`text-sm text-white md:text-base hover:scale-105 transition-transform duration-100 ${
-              router.pathname === href ? 'font-bold underline' : 'font-normal'
-            }`}
-          >
-            {title}
-          </a>
+        <Link
+          active={router.pathname === href}
+          onClick={handleLinkClick}
+          key={title}
+          href={href}
+        >
+          {title}
         </Link>
       ))}
     </ul>

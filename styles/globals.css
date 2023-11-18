@@ -4,10 +4,6 @@
 
 @layer base {
   body {
-    @apply antialiased bg-[#111111] text-white;
-  }
-
-  a {
-    @apply text-orange-400 hover:underline underline-offset-4;
+    @apply antialiased text-white bg-black;
   }
 }
