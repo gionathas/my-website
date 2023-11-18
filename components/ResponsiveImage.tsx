@@ -23,11 +23,10 @@ const ResponsiveImage = ({
     <div className={`relative overflow-hidden ${className}`} onClick={onClick}>
       <Image
         alt={alt}
-        className={`duration-200 ease-in-out ${imageClassName} ${
+        className={`duration-200 ease-in-out object-cover ${imageClassName} ${
           isLoading ? 'grayscale blur-md' : 'grayscale-0 blur-0'
         }`}
-        objectFit="cover"
-        layout="fill"
+        fill
         onLoadingComplete={() => setIsLoading(false)}
         {...rest}
       />
