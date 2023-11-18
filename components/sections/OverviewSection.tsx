@@ -1,5 +1,5 @@
 import ResponsiveImage from 'components/ResponsiveImage'
-
+import Link from 'next/link'
 import ProfileImage from 'public/images/profile/main_profile.png'
 import socials from 'public/social.json'
 
@@ -40,14 +40,14 @@ const OverviewArticle = () => {
         <br />
         <span>
           I ❤️ sharing my knowledge and works on{' '}
-          <a
-            className="link"
+          <Link
             href={socials.youtube}
             target="_blank"
-            rel="noreferrer"
+            rel="no-referrer"
+            className="text-orange-400 hover:underline underline-offset-4 "
           >
             Youtube
-          </a>
+          </Link>
         </span>
       </p>
     </article>
