@@ -35,7 +35,7 @@ const Header = () => {
         'backdrop-blur-md bg-slate-700/10'
       }`}
     >
-      <div className="flex flex-wrap items-center justify-between max-w-2xl px-4 py-3 mx-auto">
+      <div className="flex flex-wrap items-center justify-between max-w-2xl p-5 mx-auto">
         <nav className="flex items-center">
           {/* <MobileNavigation className="ml-2" /> */}
           <RowNavigationLayout className="p-2" />
