@@ -1,14 +1,9 @@
 import routes from 'config/routes'
 import useWindowScroll from 'lib/hooks/useWindowScroll'
-import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
-
-const ThemeButton = dynamic(() => import('components/buttons/ThemeButton'), {
-  ssr: false,
-})
 
 const navigationLinks: { title: string; href: string }[] = [
   {
@@ -37,11 +32,10 @@ const Header = () => {
       }`}
     >
       <div className="flex flex-wrap items-center justify-between max-w-2xl px-4 py-3 mx-auto">
-        <Link href={routes.home}>
+        <Link href={routes.home} className="no-underline">
           <h2 className="font-semibold cursor-pointer">👨🏻‍💻 Gionatha Sturba</h2>
         </Link>
         <nav className="flex items-center">
-          {/* <ThemeButton /> */}
           <MobileNavigation className="ml-2" />
           <DesktopNavigation className="ml-4" />
         </nav>
@@ -79,7 +73,7 @@ const MobileNavigation = ({ className }: { className?: string }) => {
           className="absolute right-0 p-4 rounded-lg w-44 bg-gray-700/90 top-9 ring-2 ring-gray-50/40"
         >
           <NavigationLinks
-            onClick={() => setShowMenu(false)}
+            onLinkClick={() => setShowMenu(false)}
             className="flex flex-col items-center gap-y-2"
           />
         </div>
@@ -90,25 +84,25 @@ const MobileNavigation = ({ className }: { className?: string }) => {
 
 const NavigationLinks = ({
   className,
-  onClick,
+  onLinkClick: handleLinkClick,
 }: {
   className?: string
-  onClick?: () => void
+  onLinkClick?: () => void
 }) => {
   const router = useRouter()
 
   return (
     <ul className={className}>
       {navigationLinks.map(({ title, href }) => (
-        <Link key={title} href={href}>
-          <a
-            onClick={onClick}
-            className={`text-sm text-white md:text-base hover:scale-105 transition-transform duration-100 ${
-              router.pathname === href ? 'font-bold underline' : 'font-normal'
-            }`}
-          >
-            {title}
-          </a>
+        <Link
+          className={`text-sm text-white md:text-base hover:scale-105 transition-transform duration-100 ${
+            router.pathname === href ? 'font-bold underline' : 'font-normal'
+          }`}
+          onClick={handleLinkClick}
+          key={title}
+          href={href}
+        >
+          {title}
         </Link>
       ))}
     </ul>
