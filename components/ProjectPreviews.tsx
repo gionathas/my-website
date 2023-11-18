@@ -1,5 +1,5 @@
 import React from 'react'
-import LinkWithRightArrow from './LinkWithRightArrow'
+import { LinkWithRightArrow } from './Link'
 
 export type LatestSectionProps = {
   title: string
