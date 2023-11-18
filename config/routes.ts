@@ -3,4 +3,5 @@ export default {
   // bio: '/bio',
   projects: '/projects',
   contacts: '/contacts',
+  blog: '/blog',
 } as const
