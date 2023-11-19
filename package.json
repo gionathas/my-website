@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@notion-render/client": "^0.0.2",
+    "@notionhq/client": "^2.2.13",
+    "invariant": "^2.2.4",
     "next": "^13.5.6",
     "next-themes": "^0.2.0",
     "nextjs-google-analytics": "^1.2.1",
@@ -17,6 +20,8 @@
     "sharp": "^0.32.6"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/invariant": "^2.2.37",
     "@types/node": "18.0.1",
     "@types/react": "18.0.14",
     "@types/react-dom": "18.0.5",
