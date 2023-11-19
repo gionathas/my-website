@@ -5,7 +5,7 @@ const useWindowScroll = () => {
   const [scrollPosition, setScrollPosition] = useState(0)
 
   useEffect(() => {
-    if (isBrowser()) {
+    if (isBrowser) {
       const updatePosition = () => {
         setScrollPosition(window.pageYOffset)
       }
