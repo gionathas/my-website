@@ -4,13 +4,13 @@ import Head from 'next/head'
 const BlogPage: NextPage = () => {
   return (
     <>
-      <PageMetaTags />
+      <BlogSeo />
       <div>Work in progress</div>
     </>
   )
 }
 
-const PageMetaTags = () => {
+const BlogSeo = () => {
   return (
     <Head>
       <title>Blog | Gionatha Sturba</title>

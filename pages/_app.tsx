@@ -12,7 +12,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   return (
     <>
-      <MetaTags />
+      <DefaultSeo />
       <GoogleAnalytics />
       <ThemeProvider attribute="class">
         <Layout>
@@ -23,7 +23,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   )
 }
 
-const MetaTags = () => {
+const DefaultSeo = () => {
   return (
     <Head>
       <link
