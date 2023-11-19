@@ -4,4 +4,5 @@ export default {
   projects: '/projects',
   contacts: '/contacts',
   blog: '/blog',
+  blogPost: (slug: string) => `/blog/${slug}`,
 } as const
