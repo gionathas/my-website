@@ -1,4 +1,5 @@
 import routes from 'config/routes'
+import { Post } from 'lib/mappers/post'
 import { InferGetServerSidePropsType } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -17,24 +18,31 @@ const BlogPage = ({
     <>
       <BlogSeo />
 
-      <ul className="space-y-8">
+      <ul className="space-y-7">
         {posts.map((post) => (
-          <li className="flex flex-col gap-y-1" key={post.slug}>
-            <Link
-              className="text-2xl font-extrabold hover:underline hover:underline-offset-4"
-              key={post.slug}
-              href={routes.blogPost(post.slug)}
-            >
-              {post.title}
-            </Link>
-            <span className="text-sm text-gray-300">
-              {post.tags.join(', ')}
-            </span>
-            <span className="text-xs text-gray-500">{post.createdTime}</span>
-          </li>
+          <PostPreviewEntry key={post.slug} post={post} />
         ))}
       </ul>
     </>
+  )
+}
+
+const PostPreviewEntry = ({ post }: { post: Post }) => {
+  return (
+    <li>
+      <Link
+        className="text-lg font-bold leading-tight text-white hover:underline hover:underline-offset-4"
+        key={post.slug}
+        href={routes.blogPost(post.slug)}
+      >
+        {post.title}
+      </Link>
+      <p className="mt-1 text-xs text-gray-400">
+        <span>{post.createdTime}</span>
+        <span>&nbsp;&bull;&nbsp;</span>
+        <span>{post.tags.join(', ')}</span>
+      </p>
+    </li>
   )
 }
 

@@ -42,7 +42,7 @@ const BlogPostPage = ({
       <BlogPostSeo post={post} />
 
       <article>
-        <h1 className="text-3xl mb-0.5 font-extrabold ">{post.title}</h1>
+        <h1 className="mb-1.5 text-3xl font-bold ">{post.title}</h1>
         <p className="mb-8 text-sm text-gray-400 ">
           {post.createdTime}
           &nbsp;&bull;&nbsp;
