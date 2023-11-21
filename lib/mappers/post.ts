@@ -2,6 +2,7 @@ import { PageObjectResponse } from '@notionhq/client/build/src/api-endpoints'
 
 type PostRawProperties = {
   Title: { title: Array<{ text: { content: string } }> }
+  Preview: { rich_text: Array<{ plain_text: string }> }
   Slug: { rich_text: Array<{ plain_text: string }> }
   Tags: { multi_select: Array<{ name: string }> }
   'Created Time': { created_time: string }
@@ -11,6 +12,7 @@ type PostRawProperties = {
 export type Post = {
   id: string
   title: string
+  preview: string
   slug: string
   tags: string[]
   createdTime: string
@@ -39,9 +41,12 @@ export const mapPageResponseToPost = (
 
   const properties = page.properties as PostRawProperties
 
+  console.log(properties)
+
   return {
     id: page.id,
     title: properties['Title']['title'][0].text.content,
+    preview: properties['Preview']['rich_text'][0].plain_text,
     slug: properties['Slug']['rich_text'][0].plain_text,
     tags: properties['Tags']['multi_select'].map((tag) => tag.name),
     createdTime: dateFormatter.format(
