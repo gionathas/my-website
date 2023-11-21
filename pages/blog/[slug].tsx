@@ -1,16 +1,31 @@
 import { NotionRenderer } from '@notion-render/client'
 import { fetchPostBySlug, fetchPostContent } from 'lib/api/blog'
 import { Post } from 'lib/mappers/post'
-import { GetServerSidePropsContext, InferGetServerSidePropsType } from 'next'
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import notion from 'notion'
+import { ParsedUrlQuery } from 'querystring'
 
-export const getServerSideProps = async ({
-  params,
-}: GetServerSidePropsContext) => {
-  const { slug } = params as { slug: string }
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    fallback: 'blocking',
+    paths: [],
+  }
+}
 
-  const post = await fetchPostBySlug(slug)
+export const getStaticProps: GetStaticProps<{
+  post: Post
+  htmlContent: string
+}> = async ({ params }) => {
+  const { slug } = params as ParsedUrlQuery
+
+  if (!slug) {
+    return {
+      notFound: true,
+    }
+  }
+
+  const post = await fetchPostBySlug(slug as string)
 
   if (!post) {
     return {
@@ -30,13 +45,14 @@ export const getServerSideProps = async ({
       post,
       htmlContent: html,
     },
+    revalidate: parseInt(process.env.BLOG_POST_REVALIDATE_TIME),
   }
 }
 
 const BlogPostPage = ({
   post,
   htmlContent,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <BlogPostSeo post={post} />
