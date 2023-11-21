@@ -1,7 +1,7 @@
 import routes from 'config/routes'
 import { Post } from 'lib/mappers/post'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
-import Head from 'next/head'
+import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import { fetchPosts } from '../../lib/api/blog'
 
@@ -49,23 +49,20 @@ const PostPreviewEntry = ({ post }: { post: Post }) => {
   )
 }
 
+const description =
+  'A collection of post where I ramble about anything not tech related.'
+
 const BlogSeo = () => {
   return (
-    <Head>
-      <title>Blog | Gionatha Sturba</title>
-
-      <meta
-        name="description"
-        content="A collection of posts where I ramble about anything non-tech-related."
-      />
-
-      <meta property="og:title" content="Blog | Gionatha Sturba" />
-      <meta
-        property="og:description"
-        content="A collection of posts where I ramble about anything non-tech-related."
-      />
-      <meta property="og:url" content="https://gionathas.dev/blog" />
-    </Head>
+    <NextSeo
+      title="Blog"
+      description={description}
+      openGraph={{
+        title: "Gionatha's Blog",
+        description,
+        url: `https://gionathas.dev${routes.blog}`,
+      }}
+    />
   )
 }
 

@@ -1,8 +1,9 @@
 import { NotionRenderer } from '@notion-render/client'
+import routes from 'config/routes'
 import { fetchPostBySlug, fetchPostContent } from 'lib/api/blog'
 import { Post } from 'lib/mappers/post'
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
-import Head from 'next/head'
+import { NextSeo } from 'next-seo'
 import notion from 'notion'
 import { ParsedUrlQuery } from 'querystring'
 
@@ -75,9 +76,21 @@ const BlogPostPage = ({
 
 const BlogPostSeo = ({ post }: { post: Post }) => {
   return (
-    <Head>
-      <title>{post.title}</title>
-    </Head>
+    <NextSeo
+      defaultTitle={post.title}
+      description={post.preview}
+      openGraph={{
+        title: post.title,
+        url: `https://gionathas.dev${routes.blogPost(post.slug)}`,
+        description: post.preview,
+        article: {
+          publishedTime: post.createdTime,
+          modifiedTime: post.lastEditedTime,
+          tags: post.tags,
+          authors: ['Gionatha Sturba'],
+        },
+      }}
+    />
   )
 }
 
