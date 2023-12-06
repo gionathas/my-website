@@ -1,6 +1,6 @@
-import LatestWorksSection from 'components/sections/FeaturedProjects'
-import PopularPostsSection from 'components/sections/FeaturedVideos'
-import OverviewSection from 'components/sections/OverviewSection'
+import LatestWorksSection from 'components/home/FeaturedProjects'
+import PopularPostsSection from 'components/home/FeaturedVideos'
+import OverviewSection from 'components/home/OverviewSection'
 import type { NextPage } from 'next'
 
 const HomePage: NextPage = () => {

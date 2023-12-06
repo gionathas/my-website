@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 @layer base {
+  html,
   body {
-    @apply antialiased text-white bg-black;
+    @apply antialiased text-white bg-black !important;
   }
 }
